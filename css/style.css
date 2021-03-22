@@ -1,0 +1,290 @@
+:root {
+  --background-color: #222831;
+  --primary-color: #9cf7f7;
+  --secondary-color: #0cb6b6;
+
+  --text-light-color: #fff;
+  --text-dark-color: #333
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: var(--background-color);
+  color: var(--text-light-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+li, a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 20px;
+}
+
+li a:hover,
+a:hover {
+  transition: all .25s;
+  color: var(--secondary-color);
+}
+
+img {
+  width: 100%;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+  box-shadow: 5px 5px 15px 5px #000000;
+  -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+img:hover {
+  -webkit-transform: scale3d(0.95,0.95,1);
+	transform: scale3d(0.95,0.95,1);
+}
+
+/**********
+ * NAVBAR *
+ **********/
+.navbar .flex {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.navbar .logo {
+  margin-right: auto;
+  font-size: 40px;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+/************
+ * SHOWCASE *
+ ************/
+.showcase .md {
+  width: 75%;
+  letter-spacing: 2.5px;
+}
+
+/******************
+ * TITTLE SECTION *
+ ******************/
+.tittle-section .flex {
+  justify-content: flex-end;  
+}
+
+.tittle-section div {
+  margin-right: auto;  
+}
+
+/*************
+ * PORTFOLIO *
+ *************/
+@media only screen and (min-width: 700px){
+  .span-3 {
+    grid-column: auto / span 2;
+    grid-row: auto / span 2;
+  }
+
+  .span-2 {
+    grid-column: auto / span 2;
+  }
+}
+
+/************
+ * SERVICES *
+ ************/
+.services h2 {
+  font-size: clamp(18px, 4vw, 25px);  
+  letter-spacing: 0.5px;
+  padding: 10px 0;
+}
+
+.services p {
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+/************
+ * INSIGHTS *
+ ************/
+.insights h2{
+  padding: 20px 0;
+  letter-spacing: 1px;
+  font-size: clamp(18px, 5vw, 20px);
+}
+
+/**********
+ * IMPACT *
+ **********/
+.impact .grid {
+  gap: 50px;
+  grid-template-columns: 2fr, 1fr;
+  align-items: start;
+}
+
+.impact-col-1 h2 {
+  font-size: clamp(18px, 5vw, 25px);
+}
+
+.impact-col-1 h3 {
+  font-size: clamp(18px, 5vw, 25px);  
+  text-decoration: underline;
+  margin: 16px 0;
+}
+
+.impact-col-1 h4 {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.impact-col-1 h5 {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.impact-col-2 {
+  justify-self: end;
+}
+
+.impact-col-2 h1 {
+  font-size: clamp(25px, 5vw, 35px);
+}
+
+/**********
+ * FOOTER *
+ **********/
+.footer {
+  margin-bottom: 50px;
+}
+
+.footer .flex {
+  justify-content: flex-end;
+  
+}
+
+.footer .footer-logo {
+  color: var(--text-light-color);
+  margin-right: auto;
+  font-size: 18px;
+}
+
+.footer .footer-logo:hover {
+  color: var(--secondary-color);
+}
+
+.footer li {
+  padding: 0 20px;
+}
+
+.footer li a {
+  font-size: 18px;
+}
+
+.footer p {
+  margin: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+/*****************
+ * TABLET SCREEN *
+ *****************/
+@media (max-width: 768px){
+
+  .navbar .mb-1 {
+    margin-bottom: 100px;
+  }
+
+  .hamburger {
+    display: block;
+  } 
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;  
+    text-align: center;  
+  }
+
+  .navbar ul li  {
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  .navbar ul.show {
+    display: block;
+    display: flex;    
+  }
+
+  .impact .grid {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+
+  .impact .impact-col-2 {
+    justify-self: start;
+  }
+
+  .footer .flex {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .footer .footer-logo {
+    margin: 0 auto;
+  }
+
+  .footer li {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 568px){   
+  .showcase .mb-1,
+  .portfolio .mb-1,
+  .services .mb-1,
+  .insights .mb-1 {
+    margin-bottom: 100px;
+  }
+
+  .tittle-section .flex {
+    flex-direction: column;    
+  }
+
+  .tittle-section .tittle-1 {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+
+  .tittle-2 {
+    margin: 0 auto;
+  }
+
+  .services .grid,
+  .services .grid .grid-r1 {
+    grid-template-columns: 1fr;
+  }
+
+}
+
