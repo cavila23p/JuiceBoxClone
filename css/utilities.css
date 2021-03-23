@@ -1,7 +1,7 @@
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .flex {
@@ -145,4 +145,13 @@
   font-size: clamp(40px, 5vw, 80px);
   font-weight: 800;
   margin: 5px 0;
+}
+
+
+@media (max-width: 568px){
+  .px-2, 
+  .px-3 {
+    padding: 0 10px;
+  }  
+  
 }

@@ -259,7 +259,7 @@ img:hover {
   }
 }
 
-@media (max-width: 568px){   
+@media (max-width: 568px){ 
   .showcase .mb-1,
   .portfolio .mb-1,
   .services .mb-1,
@@ -281,10 +281,28 @@ img:hover {
     margin: 0 auto;
   }
 
+  .showcase { 
+    width: 100%;   
+    letter-spacing: 2.5px;    
+  }
+
+  .showcase .grid {
+    padding: 0 80px;
+  }
+  
+
+  .portfolio .grid-img-1 {
+    grid-template-columns: repeat(200px, 1fr);     
+    grid-gap: 40px;    
+    grid-auto-rows: 200px;    
+  } 
+ 
+
   .services .grid,
   .services .grid .grid-r1 {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;    
   }
+ 
 
 }
 
